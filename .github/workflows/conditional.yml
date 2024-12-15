@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "--- job exec on main branch push ---"
-    - uses: actions/checkout@v4.2.2
-    - uses: actions/setup-node@v4.1.0
+    - uses: actions/checkout@v4.1.7
+    - uses: actions/setup-node@v3
       with:
         node-version: '14'
