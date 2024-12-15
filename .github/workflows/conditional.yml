@@ -1,16 +1,20 @@
-name: conditional
+name: Conditional workflow execution
+
 on:
   push:
     branches:
-    - main
-    - demo*
+      - main
+      - demo*
+
 jobs:
   main_job:
-  if: startsWith(github.ref, 'refs/heads/main')
+    if: startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
-    - run: echo "--- job exec on main branch push ---"
-    - uses: actions/checkout@v4.1.7
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '14'
+      - run: echo "-------JOB EXECUTION ON MAIN BRANCH PUSH-------"
+      - uses: actions/checkout@v4.1.7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+
