@@ -7,5 +7,5 @@ jobs:
   use_myrepo_var:
     runs-on: ubuntu-latest
     steps:
-      -run: echo "This is my repo variable $MYREPO_VAR"
+      - run: echo "This is my repo variable $MYREPO_VAR"
       
