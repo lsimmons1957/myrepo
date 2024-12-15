@@ -6,7 +6,7 @@ on:
     - demo*
 jobs:
   main_job:
-  if: startsWith(github.ref, 'refs/heads/main')
+  if: startsWith(github.ref,'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
     - run: echo "--- job exec on main branch push ---"
