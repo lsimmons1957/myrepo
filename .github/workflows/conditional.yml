@@ -1,0 +1,15 @@
+name: conditional
+on:
+  push:
+    branches:
+    - main
+    - demo*
+jobs:
+  main_job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "--- job exec on main branch push ---"
+    - uses: actions/checkout@v4.2.2
+    - uses: actions/setup-node@v4.1.0
+      with:
+        node-version: '14'
